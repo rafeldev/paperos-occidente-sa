@@ -49,7 +49,7 @@ const TodayCard = ({ data }) => {
           <span> { data?.day?.daily_chance_of_rain >= 70 ? "Probabilidad de lluvia alta" : "Probabilidad de lluvia baja" } </span>
         </div>
         <figure>
-          <img src={`http://cdn.weatherapi.com/weather/64x64/day/308.png`} alt="icon-weather"/>
+          <img src={data?.day?.condition?.icon} alt="icon-weather"/>
         </figure>
       </div>
 
