@@ -1,0 +1,163 @@
+.Card-container {
+  width: 631px;
+  height: 675px;
+  left: 321px;
+  top: 215px;
+
+  margin-top: 215px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(26, 22, 32, 0.1);
+  border-radius: 8px;
+}
+
+/* ------- Header -------  */
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Rubik", sans-serif;
+  color: #463f30;
+
+  margin: 0;
+  margin-right: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+}
+
+.Header-day {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  margin: 0;
+}
+
+.Header-date {
+  margin: 0;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.Header-hr {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  width: 531px;
+  height: 0px;
+  left: 371px;
+  top: 278px;
+  border: 1px solid #439269;
+}
+
+/* ------- Card main -------  */
+
+.Card-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 461px;
+  height: 182px;
+  left: 406px;
+  top: 321px;
+
+  background: #ebd19f;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.Card-text {
+  display: flex;
+  flex-direction: column;
+
+  color: #463f30;
+}
+
+.Card-text h1 {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64px;
+
+  margin-bottom: 0px;
+}
+
+.Card-text span {
+  margin: 0;
+}
+
+/* ------- Card main two -------  */
+
+.Card-main-two {
+  display: flex;
+  justify-content: space-between;
+
+  width: 461px;
+  left: 406px;
+  top: 321px;
+}
+
+.Card-sidebar {
+  width: 231px;
+  height: 267px;
+  left: 406px;
+  top: 522px;
+
+  margin: 19px 18px 0 0;
+  padding: 24px 24px 20px 24px;
+
+  background: #439269;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.Card-sidebar ul {
+  list-style: none;
+}
+
+.Card-sidebar ul > li > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card-sidebar ul > li > div > p {
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.Card-sidebar ul > li > div > p:nth-child(odd) {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.Card-sidebar ul > li > div > p:nth-child(even) {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.Card-ilustration {
+  display: flex;
+  width: 212px;
+  height: 133px;
+  left: 655px;
+  top: 589px;
+
+  margin: auto;
+
+  background: url(../../assets/rain1.png);
+}

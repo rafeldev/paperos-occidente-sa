@@ -1,0 +1,158 @@
+.SecondCard-container {
+  width: 632px;
+  height: 330px;
+  left: 967px;
+  top: 215px;
+
+  margin-top: 215px;
+  padding-bottom: 24px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(26, 22, 32, 0.1);
+  border-radius: 8px;
+}
+
+/* ------- Header -------  */
+
+.SecondCard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Rubik", sans-serif;
+  color: #463f30;
+
+  margin: 0;
+  margin-right: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+}
+
+.SecondCard-header-day {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  margin: 0;
+}
+
+.SecondCard-header-date {
+  margin: 0;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.SecondCard-header-hr {
+  margin-top: 5px;
+  margin-bottom: 24px;
+  width: 531px;
+  height: 0px;
+  left: 371px;
+  top: 278px;
+  border: 1px solid #439269;
+}
+
+/* ------- Second Card main -------  */
+
+.SecondCard-main {
+  width: 231px;
+  height: 219px;
+  left: 1023px;
+  top: 302px;
+
+  margin: 0;
+  margin-left: 56px;
+  margin-right: 0px;
+  margin-bottom: 24px;
+  padding: 16px 24px 16px 15px;
+
+  background: #ebd19f;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.SecondCard-text {
+  display: flex;
+  flex-direction: column;
+
+  color: #463f30;
+}
+
+.SecondCard-text h1 {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64px;
+
+  margin: 0;
+  margin-bottom: 0px;
+}
+
+.SecondCard-text span {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.SecondCard-sidebar ul {
+  list-style: none;
+  color: #463f30;
+}
+
+.SecondCard-sidebar ul > li > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SecondCard-sidebar ul > li > div > p {
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: left;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.SecondCard-sidebar ul > li > div > p:nth-child(even) {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SecondCard-ilustration {
+  width: 251px;
+  height: 143px;
+  left: 1286px;
+  top: 340px;
+
+  background: url(../../assets/rain1.png);
+}
+
+.No-rain {
+  width: 251px;
+  height: 143px;
+  left: 1286px;
+  top: 340px;
+
+  background: url(../../assets/despejado.png);
+}

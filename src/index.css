@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0 auto;
   padding: 0;
@@ -5,7 +6,8 @@
 }
 
 body {
-  font-family: "montseratt", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f7f7f7;
 }
 
 .app {
@@ -13,10 +15,6 @@ body {
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
-}
-
-.app.warm {
-  background-image: url(./assets/nature.jpg);
 }
 
 main {
