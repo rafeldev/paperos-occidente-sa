@@ -36,7 +36,6 @@ function App() {
     .then(res => res.json())
     .then(result => {
       setData(result)
-      console.log(result)
     })
   }, [])
 
@@ -48,8 +47,8 @@ function App() {
       <div className="contain">
         <TodayCard data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[0] : "error"  } /> 
         <div className="contain-column">
-          <SecondCard otherDay="MAÑANA" data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[1] : "error" } /> 
-          <SecondCard secondaryHeigh="15px" otherDay="SIGUIENTE DIA" data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[2] : "error"  } /> 
+          <SecondCard otherday="MAÑANA" data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[1] : "error" } /> 
+          <SecondCard secondaryHeigh="15px" otherday="SIGUIENTE DIA" data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[2] : "error"  } /> 
         </div>
       </div>
       

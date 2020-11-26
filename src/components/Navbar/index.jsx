@@ -15,7 +15,7 @@ const Navbar = ({ data }) => {
         <h1>Paperos del occidente SA</h1>
       </div>
       <div className="City">
-        <h1> { data?.location?.name }</h1>
+        <h1>{ data?.location?.name },CO</h1>
         <Icon icon={bxsMap} style={{color: '#f7f7f7', fontSize: '34px'}} />
       </div>
     </nav>

@@ -6,7 +6,7 @@ import './style.css'
 import Item from '../Item/index'
 
 
-const SecondCard = ({ secondaryHeigh, data, otherDay }) => {
+const SecondCard = ({ secondaryHeigh, data, otherday }) => {
 
   const Div = styled.div`
     width: 632px;
@@ -46,7 +46,7 @@ const SecondCard = ({ secondaryHeigh, data, otherDay }) => {
     <Div secondaryHeigh={secondaryHeigh} className="SecondCard-container" >
 
       <div className="SecondCard-header">
-        <h1 className="SecondCard-header-day" otherDay={otherDay}>{otherDay}</h1>
+        <h1 className="SecondCard-header-day" otherDay={otherday}>{otherday}</h1>
         <p className="SecondCard-header-date">{data?.date}</p>
       </div>
         <hr className="SecondCard-header-hr" />
