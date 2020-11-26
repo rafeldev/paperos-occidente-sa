@@ -28,15 +28,15 @@ const SecondCard = ({ secondaryHeigh, data }) => {
   const items = [
     {
       title: "Temp min",
-      description: `${Math.round(data?.main?.temp_min)}°C`,
+      description: `${Math.round(data?.day?.mintemp_c)}°C`,
     },
     {
       title: "Temp max",
-      description: `${Math.round(data?.main?.temp_max)}°C`,
+      description: `${Math.round(data?.day?.maxtemp_c)}°C`,
     },
     {
-      title: "Humidity",
-      description: `${data?.main?.humidity}%`,
+      title: "Lluvia",
+      description: `${data?.day?.daily_chance_of_rain}%`,
     },
   ]
 
@@ -46,16 +46,16 @@ const SecondCard = ({ secondaryHeigh, data }) => {
     <Div secondaryHeigh={secondaryHeigh} className="SecondCard-container" >
 
       <div className="SecondCard-header">
-        <h1 className="SecondCard-header-day">TOMORROW</h1>
-        <p className="SecondCard-header-date">{data?.dt_txt}</p>
+        <h1 className="SecondCard-header-day">MAÑANA</h1>
+        <p className="SecondCard-header-date">{data?.date}</p>
       </div>
         <hr className="SecondCard-header-hr" />
 
       <div className="display-flex">
         <div className="SecondCard-main">
           <div className="SecondCard-text">
-            <h1>{Math.round(data?.main?.temp)}°C</h1>
-            <span>{data?.weather ? data?.weather[0].description : null}</span>
+            <h1>{Math.round(data?.day?.avgtemp_c)}°C</h1>
+            <span>{data?.day?.condition?.text}</span>
           </div>
           <div className="SecondCard-sidebar">
               <ul>
@@ -65,7 +65,7 @@ const SecondCard = ({ secondaryHeigh, data }) => {
               </ul>
         </div>
         </div>
-        <div className={data?.main?.humidity >= 70 ? "Card-ilustration" : "No-rain" }>
+        <div className={data?.day?.daily_chance_of_rain >= 70 ? "Card-ilustration" : "No-rain" }>
         </div>
       </div>
       

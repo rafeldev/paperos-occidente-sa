@@ -9,31 +9,27 @@ const TodayCard = ({ data }) => {
   const items = [
     {
       title: "Temp min",
-      description: `${Math.round(data?.main?.temp_min)}°C`,
+      description: `${Math.round(data?.day?.mintemp_c)}°C`,
     },
     {
       title: "Temp max",
-      description: `${Math.round(data?.main?.temp_max)}°C`,
+      description: `${Math.round(data?.day?.maxtemp_c)}°C`,
     },
     {
-      title: "Clouds",
-      description: `${data?.clouds?.all}%`,
+      title: "Precipitación",
+      description: `${data?.day?.totalprecip_mm}%`,
     },
     {
-      title: "Wind speed",
-      description: `${data?.wind?.speed}km/h`,
+      title: "Humedad",
+      description: `${data?.day?.avghumidity}%`,
     },
     {
-      title: "Humidity",
-      description: `${data?.main?.humidity}%`,
+      title: "Viento",
+      description: `${data?.day?.maxwind_kph}km/h`,
     },
     {
-      title: "Feels like",
-      description: `${Math.round(data?.main?.feels_like)}°C`,
-    },
-    {
-      title: "Rain",
-      description: `${data.rain ? data.rain["3h"] : null}%`,
+      title: "Lluvia",
+      description: `${data?.day?.daily_chance_of_rain}%`,
     },
   ];
 
@@ -41,19 +37,19 @@ const TodayCard = ({ data }) => {
   return (
     <div className="Card-container">
       <div className="Header">
-        <h1 className="Header-day">TODAY</h1>
-        <p className="Header-date">{data?.dt_txt}</p>
+        <h1 className="Header-day">HOY</h1>
+        <p className="Header-date">{data?.date}</p>
       </div>
       <hr className="Header-hr" />
 
       <div className="Card-main">
         <div className="Card-text">
-          <h1>{Math.round(data?.main?.temp)}°C</h1>
-          <span>{data.weather ? data.weather[0].description : null}</span>
-          <span> { data?.main?.humidity >= 70 ? "Probabilidad de lluvia alta" : "Probabilidad de lluvia baja" } </span>
+          <h1>{Math.round(data?.day?.avgtemp_c)}°C</h1>
+          <span>{data?.day?.condition?.text}</span>
+          <span> { data?.day?.daily_chance_of_rain >= 70 ? "Probabilidad de lluvia alta" : "Probabilidad de lluvia baja" } </span>
         </div>
         <figure>
-          <img src={`http://openweathermap.org/img/wn/${data.weather ? data.weather[0].icon: null}@2x.png`} alt="icon-weather"/>
+          <img src={`http://cdn.weatherapi.com/weather/64x64/day/308.png`} alt="icon-weather"/>
         </figure>
       </div>
 
@@ -65,7 +61,7 @@ const TodayCard = ({ data }) => {
             }
           </ul>
         </div>
-        <div className={data?.main?.humidity >= 70 ? "Card-ilustration" : "No-rain" }></div>
+        <div className={data?.day?.daily_chance_of_rain >= 70 ? "Card-ilustration" : "No-rain" }></div>
       </div>
 
     </div>
