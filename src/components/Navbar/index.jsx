@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import potatoIcon from '@iconify/icons-twemoji/potato';
 import bxsMap from '@iconify/icons-bx/bxs-map';
 
