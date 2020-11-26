@@ -48,8 +48,8 @@ function App() {
       <div className="contain">
         <TodayCard data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[0] : "error"  } /> 
         <div className="contain-column">
-          <SecondCard data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[1] : "error" } /> 
-          <SecondCard secondaryHeigh="15px" data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[2] : "error"  } /> 
+          <SecondCard otherDay="MAÑANA" data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[1] : "error" } /> 
+          <SecondCard secondaryHeigh="15px" otherDay="SIGUIENTE DIA" data={ data?.forecast?.forecastday ? data?.forecast?.forecastday[2] : "error"  } /> 
         </div>
       </div>
       
