@@ -5,6 +5,8 @@
   top: 215px;
 
   margin-top: 215px;
+  margin-right: 15px;
+  margin-left: 216px;
 
   background: #ffffff;
   box-shadow: 0px 2px 4px rgba(26, 22, 32, 0.1);
@@ -74,11 +76,19 @@
   border-radius: 8px;
 }
 
+/* ------- Card main img -------  */
+
+.Card-main figure > img {
+  width: 110px;
+}
+
+/* ------- Card text -------  */
+
 .Card-text {
   display: flex;
   flex-direction: column;
 
-  color: #463f30;
+  color: #2f2a20;
 }
 
 .Card-text h1 {
@@ -88,11 +98,14 @@
   font-size: 54px;
   line-height: 64px;
 
+  margin: 0;
   margin-bottom: 0px;
 }
 
 .Card-text span {
   margin: 0;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 /* ------- Card main two -------  */
@@ -160,4 +173,16 @@
   margin: auto;
 
   background: url(../../assets/rain1.png);
+}
+
+.No-rain {
+  display: flex;
+  width: 212px;
+  height: 133px;
+  left: 655px;
+  top: 589px;
+
+  margin: auto;
+
+  background: url(../../assets/despejado.png);
 }

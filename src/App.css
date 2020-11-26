@@ -1,0 +1,9 @@
+.contain {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.contain-column {
+  margin: 0;
+}

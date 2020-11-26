@@ -1,89 +1,71 @@
 import React from 'react';
 
+import Item from '../Item/index'
+
 import './style.css'
 
-const TodayCard = () => {
+const TodayCard = ({ data }) => {
 
-  // const mains = ["Temp min", "Temp max", "Clouds", "Wind speed", "Humidity", "Feels like", "Rain"]
-  // const listItems = mains.map((main) =>{
-  //   <li>
-  //     <div>
-  //       <p>Temp min</p>
-  //       <p>21ªC</p>
-  //     </div>
-  //   </li>
-  // })
+  const items = [
+    {
+      title: "Temp min",
+      description: `${Math.round(data?.main?.temp_min)}°C`,
+    },
+    {
+      title: "Temp max",
+      description: `${Math.round(data?.main?.temp_max)}°C`,
+    },
+    {
+      title: "Clouds",
+      description: `${data?.clouds?.all}%`,
+    },
+    {
+      title: "Wind speed",
+      description: `${data?.wind?.speed}km/h`,
+    },
+    {
+      title: "Humidity",
+      description: `${data?.main?.humidity}%`,
+    },
+    {
+      title: "Feels like",
+      description: `${Math.round(data?.main?.feels_like)}°C`,
+    },
+    {
+      title: "Rain",
+      description: `${data.rain ? data.rain["3h"] : null}%`,
+    },
+  ];
+
 
   return (
     <div className="Card-container">
-
       <div className="Header">
         <h1 className="Header-day">TODAY</h1>
-        <p className="Header-date">2020-11-24 21:00:00</p>
+        <p className="Header-date">{data?.dt_txt}</p>
       </div>
       <hr className="Header-hr" />
 
       <div className="Card-main">
         <div className="Card-text">
-          <h1>25ªC</h1>
-          <span>Lluvia moderada</span>
-          <span>Humidity: 66%</span>
+          <h1>{Math.round(data?.main?.temp)}°C</h1>
+          <span>{data.weather ? data.weather[0].description : null}</span>
+          <span> { data?.main?.humidity >= 70 ? "Probabilidad de lluvia alta" : "Probabilidad de lluvia baja" } </span>
         </div>
         <figure>
-          <img src="" alt="icon-weather"/>
+          <img src={`http://openweathermap.org/img/wn/${data.weather ? data.weather[0].icon: null}@2x.png`} alt="icon-weather"/>
         </figure>
       </div>
 
       <div className="Card-main-two">
         <div className="Card-sidebar">
           <ul>
-            <li>
-              <div>
-                <p>Temp min</p>
-                <p>21ªC</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>Temp max</p>
-                <p>26ªC</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>Clouds</p>
-                <p>64%</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>Wind speed</p>
-                <p>0.76km/h</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>Humidity</p>
-                <p>66%</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>Feels like</p>
-                <p>23ªC</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <p>Rain</p>
-                <p>4.26%</p>
-              </div>
-            </li>
+            {
+              items.map(item => (<Item data={data} key={item.id} item={item} />))
+            }
           </ul>
         </div>
-        <div className="Card-ilustration">
-          <img src="" alt="" className="Ilustration"/>
-        </div>
+        <div className={data?.main?.humidity >= 70 ? "Card-ilustration" : "No-rain" }></div>
       </div>
 
     </div>
